@@ -20,7 +20,7 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
-find_package(ipqm_msgs REQUIRED)
+find_package(dvl_msgs REQUIRED)
 
 include_directories(include)
 
@@ -28,7 +28,7 @@ set(ament_dependencies
   rclcpp
   std_msgs
   geometry_msgs
-  ipqm_msgs
+  dvl_msgs
 )
 
 add_library(nortek_dvl_driver src/nortek_dvl_driver.cpp)

@@ -10,8 +10,7 @@ int main(int argc, char * argv[])
 {
   rclcpp::init(argc, argv);
   auto nortek_dvl_driver_node = std::make_shared<NortekDVLDriver>();
-  // nortek_dvl_driver_node->setup();
-  rclcpp::spin(nortek_dvl_driver_node->get_node_base_interface());
+  rclcpp::spin(std::make_shared<NortekDVLDriver>());
   rclcpp::shutdown();
 
   return 0;

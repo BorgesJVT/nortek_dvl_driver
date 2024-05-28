@@ -1,8 +1,10 @@
 <launch>
-  <!-- <arg name="serial_port" default="/dev/ttyUSB0"/> -->
+  <arg name="ip_address" default="10.7.113.50"/>
+  <arg name="port" default="9002"/>
 
   <node pkg="nortek_dvl_driver" exec="nortek_dvl_driver_node" 
         name="nortek_dvl_driver_node" namespace="sensors">
-    <!-- <param name="serial_port" value="$(var serial_port)"/> -->
+    <param name="ip_address" value="$(var ip_address)"/>
+    <!-- <param name="port" value="$(var port)"/> -->
   </node>
 </launch>

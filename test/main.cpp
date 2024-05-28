@@ -217,7 +217,6 @@ void read_binary_data(const char* host, int port, size_t buffer_size = 222) {
         while (true) {
             ssize_t valread = read(sock, buffer, buffer_size);
             if (valread > 0) {
-                //data.insert(data.end(), buffer.begin(), buffer.begin() + valread);
                 std::cout << "Received " << valread << " bytes of data." << std::endl;
                 if (valread < buffer_size) continue;
 
